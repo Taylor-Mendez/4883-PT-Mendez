@@ -15,18 +15,14 @@ in the format of hh:mm:ss
 
 #### Example Input:
 
-19 20   0
-
-30
-
-  25    35 0
-
+19 20   0  
+30  
+  25    35 0  
 000
 
 #### Example Output:
 
-00:00:40
-
+00:00:40  
 00:05:00
 
 
