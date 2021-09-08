@@ -7,12 +7,12 @@ fight against his opponents. Before Fighting he just calculates one thing, the d
 soldier number and the opponent’s soldier number. From this difference he decides whether to fight or
 not. Hashmat’s soldier number is never greater than his opponent.
 
-Input
+#### Input:
 The input contains two numbers in every line. These two numbers in each line denotes the number
 soldiers in Hashmat’s army and his opponent’s army or vice versa. The input numbers are not greater
 than 232. Input is terminated by ‘End of File’.
 
-Output
+#### Output:
 For each line of input, print the difference of number of soldiers between Hashmat’s army and his
 opponent’s army. Each output should be in seperate line.
 
@@ -20,7 +20,8 @@ opponent’s army. Each output should be in seperate line.
 
 |   #   | File                       | Description                                                |
 | :---: | -------------------------- | ---------------------------------------------------------- |
-|   1   | [main.cpp](./main.cpp)     | solution file.                                             |
+|   0   | [PDF]                      | PDF of the problem                                         |
+|   1   | [main.cpp](./main.cpp)     | Solution file                                              |
 |   2   | [input](./input.txt)       | Test input file from problem statement                     |
 |   3   | [input2](./input2.txt)     | Larger test input from udebug                              |
 |   4   | [input3](./input3.txt)     | Larger test input from udebug                              |

@@ -13,13 +13,15 @@ in the format of hh:mm:ss
 
 [For Full Description](./p161.pdf)
 
-Example Input
+#### Example Input:
+
 19 20   0
 30
   25    35 0
 000
 
-Example Output
+#### Example Output:
+
 00:00:40
 00:05:00
 
