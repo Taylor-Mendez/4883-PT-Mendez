@@ -20,7 +20,7 @@ opponent’s army. Each output should be in seperate line.
 
 |   #   | File                       | Description                                                |
 | :---: | -------------------------- | ---------------------------------------------------------- |
-|   0   | [PDF]                      | PDF of the problem                                         |
+|   0   | [PDF](./p10055.pdf)        | PDF of the problem                                         |
 |   1   | [main.cpp](./main.cpp)     | Solution file                                              |
 |   2   | [input](./input.txt)       | Test input file from problem statement                     |
 |   3   | [input2](./input2.txt)     | Larger test input from udebug                              |
