@@ -80,7 +80,7 @@ int main() {
             }
 
             V.clear();
-            v.clear();                           //MIGHT NOT NEED TO CLEAR THIS ONE
+            v.clear();
             hits = 0;
         }
     }
