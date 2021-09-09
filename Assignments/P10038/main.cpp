@@ -6,12 +6,6 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <string>
-#include <cctype>
-#include <iomanip>
-
-
-#define endl "\n"
 
 using namespace std;
 
