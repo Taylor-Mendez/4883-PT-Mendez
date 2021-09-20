@@ -1,8 +1,9 @@
 ##  Assignments Folder
 
-|   #   |     Folder Link    |       Assignment Description        |
-| :---: | -------------------| ----------------------------------- |
-|   4   | [P10055](./P10055) |      Register + Simple Problem      |
-|   5   | [P161](./P161)     |      Traffic Lights                 |
-|   6   | [P10038](./P10038) |      Jolly Jumpers                  |
-|   7   | [P11080](./P11080) |      Place The Guards               |
+|   #   |     Folder Link            |       Assignment Description                    |
+| :---: | -------------------------- | ----------------------------------------------- |
+|   4   | [Assignment 4](./A04)      |      Register + Simple Problem                  |
+|   5   | [Assignment 5](./A05)      |      Traffic Lights                             |
+|   6   | [Assignment 6](./A06)      |      Jolly Jumpers                              |
+|   7   | [Assignment 7](./A07)      |      Place The Guards                           |
+|   8   | [Assignment 8](.A08)       |      Counting Distinct Iteams String Processing |

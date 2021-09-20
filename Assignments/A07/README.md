@@ -21,3 +21,5 @@
 - This project was compiled using C++ 11
 
 ### Sources
+- This source was used to understand bipartite graphs
+    - https://www.geeksforgeeks.org/bipartite-graph/
