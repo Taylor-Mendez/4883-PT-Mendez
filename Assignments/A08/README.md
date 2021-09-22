@@ -1,12 +1,11 @@
-## 10194 - Football (aka soccer)
-## 10226 - Hardwood Species
+## Program Set 8
 ### Taylor Mendez 
 ### Description:
 
 ### Folders
 
-|   #     |     Folder Link            |       Assignment Description                    |
-| :-----: | -------------------------- | ----------------------------------------------- |
-|  10194  | [10194](./)      |      Football (aka soccer)                      |
-|  10226  | [10226](./)      |      Hardwood Species                           |
+|   #     |     Folder Link                           |
+| :-----: | ----------------------------------------- |
+|  10194  | [Footbal (aka soccer)](./P10194)          |   
+|  10226  | [Hardwood Species](./P10226)              |      
 
