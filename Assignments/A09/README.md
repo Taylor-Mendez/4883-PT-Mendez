@@ -1,0 +1,22 @@
+## 10017 - The Never Ending Towers of Hanoi
+### Taylor Mendez 
+### Description:
+
+### Files
+
+|   #   | File                       | Description                                                |
+| :---: | -------------------------- | ---------------------------------------------------------- |
+|   0   | [PDF](./p10017.pdf)        | PDF of the problem                                         |
+|   1   | [main.cpp](./main.cpp)     | Solution file                                              |
+|   2   | [input](./input.txt)       | Test input file from problem statement                     |
+|   3   | [input2](./input2.txt)     | Larger test input from udebug                              |
+|   4   | [input3](./input3.txt)     | Larger test input from udebug                              |
+
+
+### Instructions
+
+- This project was compiled using C++ 11
+
+### Sources
+- This source was used to understand a recursive approach to Towers of Hanoi
+    - https://www.geeksforgeeks.org/c-program-for-tower-of-hanoi/
