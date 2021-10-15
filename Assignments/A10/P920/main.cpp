@@ -4,6 +4,7 @@
 #include <fstream>
 #include <cmath>
 #include <math.h>
+#include <iomanip>
 
 using namespace std;
 
@@ -56,8 +57,13 @@ float calculateSurfaceArea(point maxpoint, point currentpoint, point nextpoint){
     // calculate surface area using distance formula
     // d = sqrt((x2-x1)^2 + (y2-y1)^2)
 
-    d = sqrt(pow((maxpoint.x - currentpoint.x), 2) + pow((maxpoint.x - currentpoint.x), 2));
+    d = sqrt(pow((maxpoint.x - currentpoint.x), 2) + pow((maxpoint.y - currentpoint.y), 2));
 
+    return d;
+}
+float distance(point currentpoint, point nextpoint){
+    float d;
+    d = sqrt(pow((nextpoint.x - currentpoint.x), 2) + pow((nextpoint.y - currentpoint.y), 2));
     return d;
 }
 
@@ -66,38 +72,36 @@ void solve(){
     float totalSurfaceArea = 0;
 
     sort(points.begin(), points.end(), cmp);
-    printPoints(); // debug
+    // debug
+    // printPoints();
 
-    for (int i = 0; i < points.size(); i++){
-        // point maxpoint(0, 0);
-
-        point maxpoint(points[i].x, points[i].y);   //test
-        int index = 0;
+    for (int i = 0; i < points.size() - 2; i++){
         // getting the max point that is less than the current (in terms of y)
+        point maxpoint(-1, -1);
         for (int j = i + 1; j < points.size(); j++){
-            if (j == points.size() - 1){
-                // calculate the whole slope and add
+            if (points[i].y <= points[j].y){
+                maxpoint.setpoints(-1,-1);
                 break;
             }
-            if (points[i].y < points[j].y){
-                maxpoint.setpoints(0,0);
-                break;
-            }
-            if (points[j].y < points[i].y && points[j].y >= maxpoint.y){
+            if (points[j].y < points[i].y && points[j].y > maxpoint.y){
                 maxpoint.setpoints(points[j].x, points[j].y);
             }
         }
-
-        // do some calculations with max point and current
-        cout << "current point: [" << points[i].x << "," << points[i].y << "]" << endl
-             << "maxpoint: [" << maxpoint.x << "," << maxpoint.y << "]" << endl;
-
+        // if x, y of maxpoint are -1 then the point is hidden
+        if (maxpoint.x != -1){
+            totalSurfaceArea += calculateSurfaceArea(maxpoint,points[i],points[i+1]);
+        }
+        // cout << "current point: [" << points[i].x << "," << points[i].y << "]" << endl
+        //         << "maxpoint: [" << maxpoint.x << "," << maxpoint.y << "]" << endl;
     }
+    // add last calculation for second to last and last point
+    totalSurfaceArea += distance(points[points.size() - 2],points[points.size() - 1]);
+    cout << setprecision(2) << fixed << totalSurfaceArea << endl;
 }
 
 int main(){
 
-    ifstream cin("input.txt");
+    ifstream cin("input4.txt");
 
     cin >> c;
 
@@ -111,7 +115,7 @@ int main(){
             points.push_back(point(x,y));
         }
         
-        cout << "case: " << c << endl;
+        // cout << "case: " << c << endl;
         solve();
         
         points.clear();
