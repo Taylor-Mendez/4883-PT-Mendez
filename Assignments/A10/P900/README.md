@@ -11,9 +11,6 @@
 |   2   | [input](./input.txt)       | Test input file from problem statement                     |
 |   3   | [input2](./input2.txt)     | Larger test input from udebug                              |
 |   4   | [input3](./input3.txt)     | Larger test input from udebug                              |
-|   5   | [input4](./input4.txt)     | Larger test input from udebug                              |
-|   6   | [input5](./input5.txt)     | Larger test input from udebug                              |
-|   7   | [input6](./input6.txt)     | Larger test input from udebug                              |
 
 ### Instructions
 
