@@ -78,7 +78,7 @@ int BellmanFord(struct Graph* graph, int src, int time){
         }
     }
  
-    // printArr(dist, V);
+    //printArr(dist, V);
 
     // Get number of mice
     for (int i = 0; i < V; i++){
@@ -91,7 +91,7 @@ int BellmanFord(struct Graph* graph, int src, int time){
  
 // Driver program to test above functions
 int main(){
-    ifstream cin("input3.txt");
+    ifstream cin("input2.txt");
     int C;
     
     cin >> C;
@@ -106,6 +106,8 @@ int main(){
         cin >> exit;
         cin >> T;
         cin >> E;
+
+        exit--;
 
         // create graph w give # of vertices and edges
         struct Graph* graph = createGraph(V,E);
@@ -125,8 +127,8 @@ int main(){
             src--;
             dest--;
 
-            graph->edge[i].src = src;
-            graph->edge[i].dest = dest;
+            graph->edge[i].src = dest;
+            graph->edge[i].dest = src;
             graph->edge[i].weight = weight;
         }
 
