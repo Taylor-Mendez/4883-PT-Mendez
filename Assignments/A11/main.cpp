@@ -6,9 +6,7 @@ using namespace std;
 // in a given 2D array
 #include <bits/stdc++.h>
 using namespace std;
- 
-#define ROW 4
-#define COL 5
+
  
 // Implementation of Kadane's algorithm for
 // 1D array. The function returns the maximum
@@ -66,71 +64,10 @@ int kadane(int* arr, int* start, int* finish, int n)
     return maxSum;
 }
  
-// The main function that finds
-// maximum sum rectangle in M[][]
-void findMaxSum(int M[][COL])
-{
-    // Variables to store the final output
-    int maxSum = INT_MIN,
-                 finalLeft,
-                 finalRight,
-                 finalTop,
-                 finalBottom;
- 
-    int left, right, i;
-    int temp[ROW], sum, start, finish;
- 
-    // Set the left column
-    for (left = 0; left < COL; ++left) {
-        // Initialize all elements of temp as 0
-        memset(temp, 0, sizeof(temp));
- 
-        // Set the right column for the left
-        // column set by outer loop
-        for (right = left; right < COL; ++right) {
- 
-            // Calculate sum between current left
-            // and right for every row 'i'
-            for (i = 0; i < ROW; ++i)
-                temp[i] += M[i][right];
- 
-            // Find the maximum sum subarray in temp[].
-            // The kadane() function also sets values
-            // of start and finish. So 'sum' is sum of
-            // rectangle between (start, left) and
-            // (finish, right) which is the maximum sum
-            // with boundary columns strictly as left
-            // and right.
-            sum = kadane(temp, &start, &finish, ROW);
- 
-            // Compare sum with maximum sum so far.
-            // If sum is more, then update maxSum and
-            // other output values
-            if (sum > maxSum) {
-                maxSum = sum;
-                finalLeft = left;
-                finalRight = right;
-                finalTop = start;
-                finalBottom = finish;
-            }
-        }
-    }
- 
-    // Print final values
-    cout << "(Top, Left) ("
-         << finalTop << ", "
-         << finalLeft
-         << ")" << endl;
-    cout << "(Bottom, Right) ("
-         << finalBottom << ", "
-         << finalRight << ")" << endl;
-    cout << "Max sum is: " << maxSum << endl;
-}
- 
 // Driver Code
 int main()
 {
-    ifstream cin("input2.txt");
+    ifstream cin("input3.txt");
     int Z;
     while(cin >> Z){
         int M[Z][Z];
@@ -160,20 +97,20 @@ int main()
                     finalBottom;
     
         int left, right, i;
-        int temp[ROW], sum, start, finish;
+        int temp[Z], sum, start, finish;
     
         // Set the left column
-        for (left = 0; left < COL; ++left) {
+        for (left = 0; left < Z; ++left) {
             // Initialize all elements of temp as 0
             memset(temp, 0, sizeof(temp));
     
             // Set the right column for the left
             // column set by outer loop
-            for (right = left; right < COL; ++right) {
+            for (right = left; right < Z; ++right) {
     
                 // Calculate sum between current left
                 // and right for every row 'i'
-                for (i = 0; i < ROW; ++i)
+                for (i = 0; i < Z; ++i)
                     temp[i] += M[i][right];
     
                 // Find the maximum sum subarray in temp[].
@@ -183,13 +120,12 @@ int main()
                 // (finish, right) which is the maximum sum
                 // with boundary columns strictly as left
                 // and right.
-                sum = kadane(temp, &start, &finish, ROW);
+                sum = kadane(temp, &start, &finish, Z);
     
                 // Compare sum with maximum sum so far.
                 // If sum is more, then update maxSum and
                 // other output values
                 if (sum > maxSum) {
-                    cout << sum << endl;
                     maxSum = sum;
                     finalLeft = left;
                     finalRight = right;
@@ -198,16 +134,7 @@ int main()
                 }
             }
         }
-    
-        // Print final values
-        cout << "(Top, Left) ("
-            << finalTop << ", "
-            << finalLeft
-            << ")" << endl;
-        cout << "(Bottom, Right) ("
-            << finalBottom << ", "
-            << finalRight << ")" << endl;
-        cout << "Max sum is: " << maxSum << endl;
+        cout<< maxSum << endl;
         }
  
     return 0;
