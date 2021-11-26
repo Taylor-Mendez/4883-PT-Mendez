@@ -1,4 +1,4 @@
-## 100 - The 3n + 1 problem
+## 575 - Skew Binary
 ### Taylor Mendez 
 ### Description:
 
@@ -6,10 +6,9 @@
 
 |   #   | File                       | Description                                                |
 | :---: | -------------------------- | ---------------------------------------------------------- |
-|   0   | [PDF](./p100.pdf)          | PDF of the problem                                         |
+|   0   | [PDF](./p575.pdf)          | PDF of the problem                                         |
 |   1   | [main.cpp](./main.cpp)     | Solution file                                              |
 |   2   | [input](./input.txt)       | Test input file from problem statement                     |
-|   3   | [input2](./input2.txt)     | Larger test input from udebug                              |
 
 ### Instructions
 

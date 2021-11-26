@@ -6,6 +6,6 @@
 
 |   #     |     Folder Link                        |
 |  :---:  | -------------------------------------- |
-|  100    | [The 3n + 1 problem](./P100)           |   
-|  10786  | [Odd Sum](./P786)                      | 
+|  100    | [The 3n + 1 problem](./P100)           |
+|  575    | [Skew Binary](./P575)                  |
 |  11777  | [Automate the Grades](./P11777)        |
