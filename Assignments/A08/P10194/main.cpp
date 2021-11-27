@@ -185,7 +185,8 @@ int main() {
                  << "(" << teams[j].goalsScored << "-" << teams[j].goalsAgainst << ")"
                  << endl;
         }
-        cout << endl;
+        if (i != (A-1))
+            cout << endl;
     }
 
     return 0;
