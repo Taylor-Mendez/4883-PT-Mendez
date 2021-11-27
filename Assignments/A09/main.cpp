@@ -19,14 +19,18 @@ void display(){
     cout << endl;
     for (int i = 0; i < RODS; i++){
         if (i == 0)
-            cout << "A => ";
+            cout << "A=>";
         if (i == 1)
-            cout << "B => ";
+            cout << "B=>";
         if (i == 2)
-            cout << "C => ";
+            cout << "C=>";
 
         for (int j = 0; j < s[i].size(); j++){
-            cout << s[i][j] << " ";
+            if (s[i].size() == 0)
+                break;
+            if (j == 0)
+                cout << "  ";
+            cout << " " << s[i][j];
         }
         cout << endl;
     }
