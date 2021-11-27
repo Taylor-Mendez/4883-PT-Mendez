@@ -1,101 +1,139 @@
-// C++ program to print all paths
-// from a source to destination.
 #include <iostream>
-#include <list>
+#include <bits/stdc++.h>
+
 using namespace std;
  
-// A directed graph using
-// adjacency list representation
-class Graph {
-    int V; // No. of vertices in graph
-    list<int>* adj; // Pointer to an array containing adjacency lists
- 
-    // A recursive function used by printAllPaths()
-    void printAllPathsUtil(int, int, bool[], int[], int&);
- 
-public:
-    Graph(int V); // Constructor
-    void addEdge(int u, int v);
-    void printAllPaths(int s, int d);
+// a structure to represent a weighted edge in graph
+struct Edge{
+    int src,
+        dest,
+        weight;
 };
-
-Graph::Graph(int V)
-{
-    this->V = V;
-    adj = new list<int>[V];
+ 
+// a structure to represent a connected, directed and
+// weighted graph
+struct Graph{
+    // V-> Number of vertices, E-> Number of edges
+    int V, E;
+ 
+    // graph is represented as an array of edges.
+    struct Edge* edge;
+};
+ 
+// Creates a graph with V vertices and E edges
+struct Graph* createGraph(int V, int E){
+    struct Graph* graph = new Graph;
+    graph->V = V;
+    graph->E = E;
+    graph->edge = new Edge[E];
+    return graph;
 }
-
-void Graph::addEdge(int u, int v)
-{
-    adj[u].push_back(v); // Add v to u’s list.
+ 
+// A utility function used to print the solution
+void printArr(int dist[], int n){
+    printf("Vertex   Distance from Source\n");
+    for (int i = 0; i < n; ++i)
+        printf("%d \t\t %d\n", i, dist[i]);
 }
  
-// Prints all paths from 's' to 'd'
-void Graph::printAllPaths(int s, int d)
-{
-    // Mark all the vertices as not visited
-    bool* visited = new bool[V];
+// The main function that finds shortest distances from src to
+// all other vertices using Bellman-Ford algorithm.  The function
+// also detects negative weight cycle
+int BellmanFord(struct Graph* graph, int src, int time){
+    int V = graph->V;
+    int E = graph->E;
+    int dist[V];
+    int mice = 0;       // keep track of mice that get out
  
-    // Create an array to store paths
-    int* path = new int[V];
-    int path_index = 0; // Initialize path[] as empty
- 
-    // Initialize all vertices as not visited
+    // Step 1: Initialize distances from src to all other vertices
+    // as INFINITE
     for (int i = 0; i < V; i++)
-        visited[i] = false;
+        dist[i] = INT_MAX;
+    dist[src] = 0;
  
-    // Call the recursive helper function to print all paths
-    printAllPathsUtil(s, d, visited, path, path_index);
-}
- 
-// A recursive function to print all paths from 'u' to 'd'.
-// visited[] keeps track of vertices in current path.
-// path[] stores actual vertices and path_index is current
-// index in path[]
-void Graph::printAllPathsUtil(int u, int d, bool visited[],
-                              int path[], int& path_index)
-{
-    // Mark the current node and store it in path[]
-    visited[u] = true;
-    path[path_index] = u;
-    path_index++;
- 
-    // If current vertex is same as destination, then print
-    // current path[]
-    if (u == d) {
-        for (int i = 0; i < path_index; i++)
-            cout << path[i] << " ";
-        cout << endl;
-    }
-    else // If current vertex is not destination
-    {
-        // Recur for all the vertices adjacent to current vertex
-        list<int>::iterator i;
-        for (i = adj[u].begin(); i != adj[u].end(); ++i)
-            if (!visited[*i])
-                printAllPathsUtil(*i, d, visited, path, path_index);
+    // Step 2: Relax all edges |V| - 1 times. A simple shortest
+    // path from src to any other vertex can have at-most |V| - 1
+    // edges
+    for (int i = 1; i <= V - 1; i++) {
+        for (int j = 0; j < E; j++) {
+            int u = graph->edge[j].src;
+            int v = graph->edge[j].dest;
+            int weight = graph->edge[j].weight;
+            if (dist[u] != INT_MAX && dist[u] + weight < dist[v])
+                dist[v] = dist[u] + weight;
+        }
     }
  
-    // Remove current vertex from path[] and mark it as unvisited
-    path_index--;
-    visited[u] = false;
+    // Step 3: check for negative-weight cycles.  The above step
+    // guarantees shortest distances if graph doesn't contain
+    // negative weight cycle.  If we get a shorter path, then there
+    // is a cycle.
+    for (int i = 0; i < E; i++) {
+        int u = graph->edge[i].src;
+        int v = graph->edge[i].dest;
+        int weight = graph->edge[i].weight;
+        if (dist[u] != INT_MAX && dist[u] + weight < dist[v]) {
+            printf("Graph contains negative weight cycle");
+            return 0; // If negative cycle is detected, simply return
+        }
+    }
+ 
+    //printArr(dist, V);
+
+    // Get number of mice
+    for (int i = 0; i < V; i++){
+        if (dist[i] <= time)
+            mice++;
+    }
+ 
+    return mice;
 }
  
-// Driver program
-int main()
-{
-    // Create a graph given in the above diagram
-    Graph g(4);
-    g.addEdge(0, 1);
-    g.addEdge(0, 2);
-    g.addEdge(0, 3);
-    g.addEdge(2, 0);
-    g.addEdge(2, 1);
-    g.addEdge(1, 3);
- 
-    int s = 2, d = 3;
-    cout << "Following are all different paths from " << s << " to " << d << endl;
-    g.printAllPaths(s, d);
+// Driver program to test above functions
+int main(){
+    ifstream cin("input2.txt");
+    int C;
+    
+    cin >> C;
+
+    for (int j = 0; j < C; j++){
+        int V,      // number of cells or vertices
+            exit,   // exit cell
+            T,      // time
+            E;      // number of connections or edges
+        
+        cin >> V;
+        cin >> exit;
+        cin >> T;
+        cin >> E;
+
+        exit--;
+
+        // create graph w give # of vertices and edges
+        struct Graph* graph = createGraph(V,E);
+
+        // add edges
+        for (int i = 0; i < E; i++){
+            int src,
+                dest,
+                weight;
+
+            cin >> src;
+            cin >> dest;
+            cin >> weight;
+
+            // make labels of cells match
+            // for the bellmanFord function
+            src--;
+            dest--;
+
+            graph->edge[i].src = dest;
+            graph->edge[i].dest = src;
+            graph->edge[i].weight = weight;
+        }
+
+       cout << BellmanFord(graph, exit, T) << endl << endl;
+    }
  
     return 0;
 }
