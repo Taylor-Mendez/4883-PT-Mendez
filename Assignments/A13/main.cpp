@@ -127,12 +127,16 @@ int main(){
             src--;
             dest--;
 
+            // reverse to find from exit to every other cell
             graph->edge[i].src = dest;
             graph->edge[i].dest = src;
             graph->edge[i].weight = weight;
         }
 
-       cout << BellmanFord(graph, exit, T) << endl << endl;
+        if (j == (C-1))
+            cout << BellmanFord(graph, exit, T) << endl;
+        else
+            cout << BellmanFord(graph, exit, T) << endl << endl;
     }
  
     return 0;

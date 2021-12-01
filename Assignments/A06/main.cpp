@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
 
-    ifstream cin("input4.txt");
+    ifstream cin("input.txt");
 
     int A, B;                   // to read in first value in line and the rest of the values
     vector <int> V;             // to put data in
