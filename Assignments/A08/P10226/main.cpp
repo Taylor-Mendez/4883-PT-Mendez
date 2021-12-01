@@ -8,25 +8,14 @@
 #include <vector>
 #include <algorithm>
 #include <iomanip>
+#include <map>
 
 using namespace std;
-
-struct Tree{
-    string species;
-    double pop = 0;
-};
-
-bool compare(Tree a, Tree b){
-    if (a.species < b.species)
-        return 1;
-    else 
-        return 0;
-}
 
 int main() {
 
     int A;
-    ifstream cin("input3.txt");
+    ifstream cin("input2.txt");
 
     cin >> A;
     cin.ignore();
@@ -34,48 +23,45 @@ int main() {
     string placeholder;
     getline(cin, placeholder);
 
-
-    
-
     for (int i = 0; i < A; i++){
-        vector<Tree> population;
-        Tree temp;
+        map<string, int> treeCounter;
+        string input;
         double totalPop = 0;
 
-        while(getline(cin, temp.species) && (temp.species).length() != 0){
+        while(getline(cin, input) && input !=""){
             totalPop++;
-            int found = -1;
-            if (population.size() == 0){
-                (temp.pop)++;
-                population.push_back(temp);
+            // if tree not already in map
+            if(!(treeCounter.find(input) != treeCounter.end())){
+                treeCounter.insert(pair<string,int>(input,1));
             }
-            else if (population.size() != 0){
-                for (int j = 0; j < population.size(); j++){
-                    if (population[j].species == temp.species)
-                        found = j;
-                }
-
-                if (found == -1){
-                    temp.pop = 1;
-                    population.push_back(temp);
-                }
-                if (found != -1){
-                    (population[found].pop)++;
-                }
-            } 
+            else{
+                treeCounter[input]++;
+            }
         }
 
-        sort(population.begin(), population.end(), compare);
+        // debug
+        // for(const auto & key : treeCounter){
+        //     cout << key.first << " : " << key.second << endl;
+        // }
 
-        for (int j = 0; j < population.size(); j++){
-            cout << population[j].species << " " << fixed << setprecision(4) 
-                 << (population[j].pop / totalPop) * 100 << endl;
+        // vector to sort alphabetically
+        vector<pair<string, int>>trees;
+        for(const auto & key : treeCounter){
+            trees.push_back(make_pair(key.first, key.second));
         }
-        cout << endl;
+        sort(trees.begin(), trees.end());
 
-        population.clear();
+        if (i == (A-1)){
+            for(int j = 0; j < trees.size(); j++){
+                cout << trees[j].first << " " << fixed << setprecision(4) << (trees[j].second / totalPop) * 100 << endl;
+            }
+        }
+        else{
+            for(int j = 0; j < trees.size(); j++){
+                cout << trees[j].first << " " << fixed << setprecision(4) << (trees[j].second / totalPop) * 100 << endl;
+            }
+            cout << endl;
+        }
     }
-    
-
     return 0;
 }
