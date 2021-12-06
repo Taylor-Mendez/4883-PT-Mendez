@@ -28,6 +28,7 @@ opponent’s army. Each output should be in seperate line.
 |   5   | [input4](./input4.txt)     | Larger test input from udebug                              |
 |   6   | [input5](./input5.txt)     | Larger test input from udebug                              |
 |   7   | [input6](./input6.txt)     | Larger test input from udebug                              |
+|   8   | [banner.txt](./banner.txt) | Banner for print out                                       |
 
 ### Instructions
 
