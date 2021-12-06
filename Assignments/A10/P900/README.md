@@ -2,6 +2,8 @@
 ### Taylor Mendez 
 ### Description:
 
+Essentially fibonacci sequence
+
 ### Files
 
 |   #   | File                       | Description                                                |
@@ -15,5 +17,3 @@
 ### Instructions
 
 - This project was compiled using C++ 11
-
-### Sources

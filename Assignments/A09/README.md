@@ -2,6 +2,17 @@
 ### Taylor Mendez 
 ### Description:
 
+Classic towers of hanoi problem
+but this program will display a 
+copy of the puzzle step by step
+for each case. Each case will 
+have 3 pegs A,B, and C and will
+have n number of disks and will 
+also have the number of steps to 
+be displayed. The program will then
+run for each case and display the 
+puzzle step by step.
+
 ### Files
 
 |   #   | File                       | Description                                                |

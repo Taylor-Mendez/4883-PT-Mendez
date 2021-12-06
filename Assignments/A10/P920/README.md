@@ -2,6 +2,13 @@
 ### Taylor Mendez 
 ### Description:
 
+Given multiple sets of x,y coordinates 
+for each case that represent mountain 
+peaks, this program will determine how
+much surface area can be reach by the 
+sunset for each mountain slope and will
+total it up and output the total.
+
 ### Files
 
 |   #   | File                       | Description                                                |
@@ -18,3 +25,7 @@
 - This project was compiled using C++ 11
 
 ### Sources
+- This sorce was used to help remind me of equation to find slope
+    - https://www.geeksforgeeks.org/program-find-slope-line/
+- This source was used for distance equation
+    - https://www.geeksforgeeks.org/program-calculate-distance-two-points/

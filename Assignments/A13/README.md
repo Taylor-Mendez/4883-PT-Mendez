@@ -2,6 +2,19 @@
 ### Taylor Mendez 
 ### Description:
 
+Give a maze (that is essentially a 
+weighted graph) with a given number
+of nodes and weighted edges assume 
+there is a mouse in each node. Determine
+the amount of mice that will be able to 
+make it out of the maze in a certain 
+amount of given time.
+
+My soultion involves using the bellman
+ford algorithm but using it backwards
+where a from -> to designation between 
+nodes will be to -> from instead.
+
 ### Files
 
 |   #   | File                       | Description                                                |
@@ -18,3 +31,5 @@
 - This project was compiled using C++ 11
 
 ### Sources
+- Source used to understand the bellman ford algorithm
+    - https://www.geeksforgeeks.org/bellman-ford-algorithm-dp-23/

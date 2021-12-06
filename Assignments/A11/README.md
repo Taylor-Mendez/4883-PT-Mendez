@@ -2,6 +2,14 @@
 ### Taylor Mendez 
 ### Description:
 
+Given a 2-dimensional array of positive 
+and negative integers, the program will
+find the sub-rectangle with the largest 
+sum. The sum of a rectagle is the sum of
+all the elements in the rectangle.
+
+The given 2-D array will be of N x N size
+
 ### Files
 
 |   #   | File                       | Description                                                |

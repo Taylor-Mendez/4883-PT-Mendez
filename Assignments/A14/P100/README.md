@@ -2,6 +2,19 @@
 ### Taylor Mendez 
 ### Description:
 
+Given the following algorithm to find cycle
+length of an integer:
+    1. input n
+    2. print n
+    3. if n = 1 then STOP
+        4. if n is odd then n <- 3n + 1
+        5. else n <- n/2
+    6. GOTO 2
+
+The program will find the maximum cycle
+length over all numbers between (and 
+including) two given integers i and j
+
 ### Files
 
 |   #   | File                       | Description                                                |
@@ -14,5 +27,3 @@
 ### Instructions
 
 - This project was compiled using C++ 11
-
-### Sources
