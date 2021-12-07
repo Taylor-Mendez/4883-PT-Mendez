@@ -14,7 +14,14 @@ The following was varied for each case:
 
 ### Results
 #### Random
+<img src="Random.png" width="400" height="300">
+
+#### Ascending
 <img src="Ascending.png" width="400" height="300">
+
+#### Descending
+<img src="Descending.png" width="400" height="300">
+
 
 
 ### Files
