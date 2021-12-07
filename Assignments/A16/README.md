@@ -6,10 +6,9 @@ Creating an experiment to compare the sorting routines we
 discussed in class. I will vary the following about the 
 data being sorted:
 - size
-- type: integers, floats, strings
+- type: integers and strings
 - discombulation of data:
     - completely sorted or random
-    - partially unsorted
     - reverse sorted
     - already sorted
 
@@ -30,3 +29,7 @@ data being sorted:
 - This project was compiled using C++ 11
 
 ### Sources
+- https://www.programiz.com/dsa/quick-sort
+- https://www.programiz.com/dsa/radix-sort
+- https://www.programiz.com/dsa/heap-sort
+- https://www.geeksforgeeks.org/bubble-sort/
