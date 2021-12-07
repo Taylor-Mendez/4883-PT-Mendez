@@ -14,7 +14,7 @@ The following was varied for each case:
 
 ### Results
 #### Random
-![Random](./Ascending.png)
+![Random](./Ascending.png =100x20)
 
 
 ### Files
