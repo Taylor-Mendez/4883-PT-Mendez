@@ -14,15 +14,11 @@ data being sorted:
 
 ### Files
 
-|   #   | File                                | Description                                                |
-| :---: | --------------------------          | ---------------------------------------------------------- |
-|   0   | [driver.cpp](./main.cpp)            | Driver Code                                                |
-|   1   | [count sort](./countSort.hpp)       | count sort                                                 |
-|   2   | [heap sort](./heapSort.hpp)         | heap sort                                                  |
-|   3   | [quick sort](./quickSort.hpp)       | quick sort                                                 |
-|   4   | [radix sort](./radixSort.hpp)       | radix sort                                                 |
-|   5   | [rnums](./rnums.dat)                | data set of integers                                       |
-|   6   | [geNums](./geNums.py)               | python program to generate random numbers                  |
+|   #   | Folders                             | Description                                                |
+| :---: | ----------------------------------- | ---------------------------------------------------------- |
+|   0   | [Integers](./Integers)              | Experiment with integers                                   |
+|   1   | [Strings](./Strings)                | Experiment with Strings                                    |
+
 
 ### Instructions
 
