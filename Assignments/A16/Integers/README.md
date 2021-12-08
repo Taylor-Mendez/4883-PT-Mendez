@@ -26,17 +26,17 @@ The following was varied for each case:
 
 ### Files
 
-|   #   | File                                   | Description                                                |
-| :---: | --------------------------             | ---------------------------------------------------------- |
-|   0   | [driver.cpp](./main.cpp)               | Driver Code                                                |
-|   1   | [bubble sort](./bubbleSort.hpp)        | bubble sort                                                |
-|   2   | [heap sort](./heapSort.hpp)            | heap sort                                                  |
-|   3   | [quick sort](./quickSort.hpp)          | quick sort                                                 |
-|   4   | [radix sort](./radixSort.hpp)          | radix sort                                                 |
-|   5   | [rnums](./rnums.dat)                   | data set of integers                                       |
-|   6   | [rnumsascending](./rnumsascending.dat) | data set of integers sorted in ascending order             |
-|   7   | [rnumsdescending](./rnumsdescending)   | data set of integers sorted in descending order            |
-|   8   | [geNums](./geNums.py)                  | python program to generate random numbers                  |
+|   #   | File                                       | Description                                                |
+| :---: | ------------------------------------------ | ---------------------------------------------------------- |
+|   0   | [driver.cpp](./main.cpp)                   | Driver Code                                                |
+|   1   | [bubble sort](./bubbleSort.hpp)            | bubble sort                                                |
+|   2   | [heap sort](./heapSort.hpp)                | heap sort                                                  |
+|   3   | [quick sort](./quickSort.hpp)              | quick sort                                                 |
+|   4   | [radix sort](./radixSort.hpp)              | radix sort                                                 |
+|   5   | [rnums](./rnums.dat)                       | data set of integers                                       |
+|   6   | [rnumsascending](./rnumsascending.dat)     | data set of integers sorted in ascending order             |
+|   7   | [rnumsdescending](./rnumsdescending.dat)   | data set of integers sorted in descending order            |
+|   8   | [geNums](./geNums.py)                      | python program to generate random numbers                  |
 
 
 ### Instructions

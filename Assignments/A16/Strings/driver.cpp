@@ -20,8 +20,8 @@ struct sortCompare {
 
     sortCompare() {
         // m = 1073741824;
-        loadData("rwords.dat");
-        //sortNames = {"countSort", "heapSort", "quickSort", "radixSort"};
+        loadData("rwordsdescending.dat");
+        // sortNames = {"countSort", "heapSort", "quickSort", "radixSort"};
         sortNames = {"heapSort", "quickSort", "bubbleSort"};
     }
 
