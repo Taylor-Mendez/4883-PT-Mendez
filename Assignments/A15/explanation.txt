@@ -1,0 +1,43 @@
+Ex: 1
+
+123abbccc654987the remaining letters are gone :O
+
+the quick brown fox jumped over the lazy dog
+
+the messages
+can be on more than one line
+
+separated by a blank
+line
+
+natural string:
+e a c n r t b g i o h l m s d f j k p q u v w x y z 
+6 3 3 3 3 3 2 2 2 2 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 
+
+encoded string:
+e a n o t b h l r s d i m c g k p u y f j q v w x z 
+14 8 8 7 5 4 4 4 4 4 3 3 3 2 2 2 2 2 2 1 1 1 1 1 1 1 
+
+
+Ex 2:
+
+Do the same thing as in example 1
+
+natural string:
+e a c n r t b g i o h l m s d f j k p q u v w x y z 
+6 3 3 3 3 3 2 2 2 2 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 
+
+Change count of encode string to new index so...
+e  a  n  o  t  b  h  l  r  s  d  i  m  c  g  k  p  u  y  f  j  q  v  w  x  z 
+0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 
+
+and sort back into alphabetical order
+a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p   q  r  s  t  u  w  x  y  z
+1  5  13 10 0  19 14 6  11 20 15 7  12 2  3  16  21 8  9  4  17 23 24 18 25
+
+
+Ex 3:
+
+
+
+
